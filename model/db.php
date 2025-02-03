@@ -19,10 +19,10 @@ class myDB
     
     if ($stmt->execute()) {
       $stmt->close();
-      return 1; // Success
+      return 1; 
     } else {
       $stmt->close();
-      return 0; // Failure
+      return 0; 
     }
   }
 
@@ -31,6 +31,18 @@ class myDB
     $result = $conn->query($sql);
     return $result;
   }
+
+  function showProduct($table, $conn){
+    $table = $conn->real_escape_string($table);
+     $sql = "SELECT * FROM `$table`";  
+     $result = $conn->query($sql);
+     
+     if (!$result) {
+         die('Error executing query: ' . $conn->error);  
+     }
+ 
+     return $result;
+   }
 
   function showOrder($table, $conn){
    $table = $conn->real_escape_string($table);
@@ -67,6 +79,12 @@ class myDB
     }
 }
 
+function get_product_by_id($table, $conn, $id){
+  $sql = "SELECT * FROM $table WHERE ProductID = '$id'";
+  $result = $conn->query($sql);
+  return $result;
+}
+
 
 function updateOrderStatus($OrderId, $OrderStatus, $PaymentStatus, $connectionObject) {
   $sql = "UPDATE `order` SET OrderStatus = ? WHERE OrderID = ?";
@@ -89,5 +107,7 @@ function updateOrderStatus($OrderId, $OrderStatus, $PaymentStatus, $connectionOb
   }
 
 }
+
+
 
 ?>
