@@ -55,8 +55,8 @@ label {
   font-family: Arial, sans-serif;
   font-weight: bold;
   margin-right: 20px;
-  width: 150px; /* Set consistent label width */
-  display: inline-block; /* Ensures labels are in one line */
+  width: 150px; 
+  display: inline-block; 
   text-align: left;
 }
 
@@ -69,7 +69,7 @@ input, textarea {
   font-size: 1em;
 }
 textarea {
-  resize: vertical; /* Allows vertical resizing only */
+  resize: vertical; 
 }
 
 .register {
@@ -96,8 +96,3 @@ textarea {
 }
 
 /* Style for Home page */
-
-
-
-
-
