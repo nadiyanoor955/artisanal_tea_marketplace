@@ -15,7 +15,7 @@
 
         <form method="GET" action="" class="search-form">
             <label for="search">Search by OrderID:</label>
-            <input type="text" name="OrderId" id="search" placeholder="Enter OrderID" required>
+            <input type="text" name="OrderId" id="search" placeholder="Enter OrderID">
             <button type="submit">Search</button>
         </form>
         
@@ -35,7 +35,6 @@
             </thead>
             <tbody>
                 <?php 
-                    // Include the controller file to fetch the order details
                     require '../controllers/getOrderByID_control.php'; 
                 ?>
             </tbody>
