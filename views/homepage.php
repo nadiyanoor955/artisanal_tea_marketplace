@@ -19,7 +19,8 @@ if (!isset($_SESSION["employee_id"])) {
 <h2>Welcome to Artisanal Tea Marketplace</h2>
 <h1>Welcome to Employee Page</h1>
 
-<button type="button" id="profile" onclick="window.location.href='show_profile.php';">
+
+<button type="button" id="profile" onclick="window.location.href='profile.php';">
     Me
 </button>
 
@@ -53,14 +54,22 @@ if (!isset($_SESSION["employee_id"])) {
             <button type="button" id="updateOrderStatus" onclick="window.location.href='updateOrderStatus.php';">
                 Update Order Status
             </button>
+
+ </br>
+            <button type="button" id="showProduct" onclick="window.location.href='showproduct.php';">
+                View Product Details
+            </button>
+
+</br>
+            <button type="button" id="showProduct" onclick="window.location.href='showMembers.php';">
+                View All Members Details
+            </button>
+
+
         </table>
     </fieldset>
 </form>
 
-
-
-<!-- Removed the unnecessary input tag -->
-<!-- Removed the incomplete form -->
 
 </body>
 </html>
